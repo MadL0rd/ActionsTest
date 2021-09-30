@@ -14,7 +14,7 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 
 # Needs for github pages 
-# set :build_dir, '../docs'
+set :build_dir, '../docs'
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
