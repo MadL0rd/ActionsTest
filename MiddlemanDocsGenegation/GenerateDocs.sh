@@ -1,4 +1,3 @@
-
 colorPrint() {
   text=$1
   printf "%b" "\e[1;34m${text}\e[0m"
