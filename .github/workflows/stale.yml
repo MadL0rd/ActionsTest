@@ -3,14 +3,14 @@ name: create-file-action
 on:
   workflow_dispatch:
     inputs:
-      name:
-        description: 'Person to greet'
+      title:
+        description: 'Post title'
         required: true
-        default: 'Mona the Octocat'
-      home:
-        description: 'location'
-        required: false
-        default: 'The Octoverse'
+        default: 'NewPost'
+      author:
+        description: 'Post author'
+        required: true
+        default: 'Anton Tekutov'
 
 jobs:
   build:
@@ -25,10 +25,10 @@ jobs:
       run: echo "::set-output name=date::$(date +'%Y-%m-%d')"  
     - name: Create local changes
       run: |
-        cat > data/${{ steps.date.outputs.date }}-new-post.txt <<- EOM
+        cat > data/${{ steps.date.outputs.date }}-${{ github.event.inputs.title }}!.md <<- EOM
         ---
-        title: Writing a New Post
-        author: Anton Tekutov
+        title: ${{ github.event.inputs.title }}!
+        author: ${{ github.event.inputs.author }}!
         date: ${{ steps.date.outputs.date }}
         categories: [meeting]
         tags: [meeting resume]
