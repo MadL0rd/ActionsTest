@@ -13,7 +13,6 @@ jobs:
       run: echo "::set-output name=date::$(date +'%Y-%m-%d')"  
     - name: Create local changes
       run: |
-        touch 
         cat > data/${{ steps.date.outputs.date }}-new-post.txt <<- EOM
         Line 1.
         Line 2.
