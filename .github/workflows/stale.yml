@@ -20,5 +20,5 @@ jobs:
       - name: Create File
         uses: "finnp/create-file-action@master"
         env:
-          FILE_NAME: "dir/fileName.txt"
+          FILE_NAME: "fileName.md"
           FILE_DATA: "file content"
