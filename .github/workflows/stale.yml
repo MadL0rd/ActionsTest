@@ -17,7 +17,8 @@ jobs:
         uses: actions/hello-world-docker-action@master
         with:
           who-to-greet: Mona-the-Octocat-${{ steps.date.outputs.date }}
-      - uses: "finnp/create-file-action@master"
+      - name: Create File
+        uses: "finnp/create-file-action@master"
         env:
           FILE_NAME: "dir/fileName.txt"
           FILE_DATA: "file content"
