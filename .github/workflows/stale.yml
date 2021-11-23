@@ -40,7 +40,7 @@ jobs:
         git config --local user.email "file_creation_bot@madlord.ru"
         git config --local user.name "github-actions[bot]"
         git add .
-        git commit -m "Add changes" -a
+        git commit -m "New post added" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
