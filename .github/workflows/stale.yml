@@ -25,10 +25,10 @@ jobs:
       run: echo "::set-output name=date::$(date +'%Y-%m-%d')"  
     - name: Create local changes
       run: |
-        cat > data/${{ steps.date.outputs.date }}-${{ github.event.inputs.title }}!.md <<- EOM
+        cat > data/${{ steps.date.outputs.date }}-${{ github.event.inputs.title }}.md <<- EOM
         ---
-        title: ${{ github.event.inputs.title }}!
-        author: ${{ github.event.inputs.author }}!
+        title: ${{ github.event.inputs.title }}
+        author: ${{ github.event.inputs.author }}
         date: ${{ steps.date.outputs.date }}
         categories: [meeting]
         tags: [meeting resume]
