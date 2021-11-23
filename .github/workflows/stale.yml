@@ -14,7 +14,7 @@ jobs:
     - name: Create local changes
       run: |
         touch 
-        cat > "data/${{ steps.date.outputs.date }}-new-post.txt" <<- EOM
+        cat > data/${{ steps.date.outputs.date }}-new-post.txt <<- EOM
         Line 1.
         Line 2.
         EOM
