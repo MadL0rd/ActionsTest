@@ -1,2 +1,8 @@
-Line 1.
-Line 2.
+---
+title: Writing a New Post
+author: Anton Tekutov
+date: 2021-11-23
+categories: [meeting]
+tags: [meeting resume]
+render_with_liquid: false
+---
