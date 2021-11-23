@@ -18,7 +18,7 @@ jobs:
         RELEASE_NAME: nightly-release-${{ steps.date.outputs.date }}    
     - name: Create local changes
       run: |
-        touch ${{ steps.date.outputs.date }}-new-post.txt
+        touch posts/${{ steps.date.outputs.date }}-new-post.txt
         echo ls
     - name: Commit files
       run: |
