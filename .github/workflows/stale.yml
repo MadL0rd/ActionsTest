@@ -14,8 +14,14 @@ jobs:
     - name: Create local changes
       run: |
         cat > data/${{ steps.date.outputs.date }}-new-post.txt <<- EOM
-        Line 1.
-        Line 2.
+        ---
+        title: Writing a New Post
+        author: Anton Tekutov
+        date: ${{ steps.date.outputs.date }}
+        categories: [meeting]
+        tags: [meeting resume]
+        render_with_liquid: false
+        ---
         EOM
     - name: Commit files
       run: |
